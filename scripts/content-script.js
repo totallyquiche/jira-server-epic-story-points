@@ -10,7 +10,7 @@ fetch(JIRA_API_ENDPOINT)
     .then(response => response.json())
     .then(data => {
         const ISSUES = Array.from(data.issues);
-        const ISSUE_ROWS = Array.from(document.querySelectorAll('#ghx-issues-in-epic-table > tbody >tr'));
+        const ISSUE_ROWS = Array.from(document.querySelectorAll('#ghx-issues-in-epic-table > tbody > tr'));
 
         ISSUE_ROWS.forEach(row => {
             const ISSUE = ISSUES.filter(issue => issue.key == row.dataset.issuekey)[0];
