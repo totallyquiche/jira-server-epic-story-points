@@ -20,9 +20,7 @@ const UPDATE_POINTS = function () {
         .then(data => {
             if (data.total > MAX_RESULTS) {
                 over_max_results = true;
-            }
-
-            if (!over_max_results) {
+            } else {
                 const ISSUES = Array.from(data.issues);
                 const ISSUES_TABLE = document.querySelector('#ghx-issues-in-epic-table > tbody');
                 const ISSUE_ROWS = Array.from(ISSUES_TABLE.querySelectorAll('tr'));
