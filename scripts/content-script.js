@@ -74,9 +74,9 @@ const UPDATE_POINTS = function () {
 }
 
 const INTERVAL = setInterval(() => {
-    if (!document.querySelector('#' + TOTAL_STORY_POINTS_ROW_ID) && !updating) {
-        UPDATE_POINTS();
-    } else if (over_max_results) {
+    if (over_max_results) {
         clearInterval(INTERVAL);
+    } else if (!document.querySelector('#' + TOTAL_STORY_POINTS_ROW_ID) && !updating) {
+        UPDATE_POINTS();
     }
 });
