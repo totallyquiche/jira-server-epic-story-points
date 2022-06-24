@@ -1,8 +1,8 @@
 const JIRA_URL = 'https://jira.wellspring.com';
 const STORY_POINTS_FIELD_NAME = 'customfield_10106';
 const POINTS_PLACEHOLDER = '--';
-const COLUMN_INDEX = 3;
-const TOTAL_STORY_POINTS_LABEL = 'Total Story Points';
+const COLUMN_INDEX = 6;
+const TOTAL_STORY_POINTS_LABEL = 'Total';
 
 const MAX_RESULTS = 1000;
 const EPIC_ISSUE_KEY = document.querySelector('#ghx-epic-key').innerText;
@@ -47,16 +47,15 @@ const UPDATE_POINTS = function () {
     
                 for (let i = 0; i < 8; i++) {
                     const CELL = document.createElement('td');
+
+                    CELL.style.textAlign = 'right';
+                    CELL.style.fontWeight = 'bold';
     
-                   switch (i) {
+                    switch (i) {
                         case (COLUMN_INDEX - 1):
-                            CELL.style.textAlign = 'right';
-                            CELL.style.fontWeight = 'bold';
                             CELL.innerText = TOTAL_STORY_POINTS_LABEL + ':';
                             break;
                         case COLUMN_INDEX:
-                            CELL.style.textAlign = 'right';
-                            CELL.style.fontWeight = 'bold';
                             CELL.innerText = total_story_points;
                             break;
                     }
