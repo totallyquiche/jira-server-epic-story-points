@@ -1,6 +1,6 @@
 # Jira Server Epic Story Points
 
-A Google Chrome extension for viewing Story Points when viewing an Epic in Jira Server.
+A Google Chrome and Firefox extension for viewing Story Points when viewing an Epic in Jira Server.
 
 ## Description
 
@@ -9,12 +9,19 @@ This adds a column to the "Issues in epic" table which displays the value of the
 
 ## Installation
 
+### Google Chrome
 1. Download and extract the files
 1. In Google Chrome, navigate to `chrome://extensions`
 1. Enable [Developer Mode](https://developer.chrome.com/docs/extensions/mv3/faq/#faq-dev-01)
 1. Click "Load Unpacked"
 1. Select the folder containing the extracted files
 1. Optionally, disable Developer Mode
+
+### Firefox
+1. Download and extract the files
+1. In Firefox, navigate to `about:addons`
+1. Next to Manage Your Extensions, click the gear icon and select "Install Add-on From File..."
+1. Select the `.xpi` file located in `web-ext-artifacts`
 
 ## Configuration
 
