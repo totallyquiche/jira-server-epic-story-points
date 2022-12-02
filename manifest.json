@@ -2,7 +2,7 @@
   "name": "Jira Server Epic Story Points",
   "description": "View Story Points when viewing an Epic in Jira Server.",
   "version": "1.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "content_scripts": [
     {
       "matches": ["https://jira.wellspring.com/browse/*"],
